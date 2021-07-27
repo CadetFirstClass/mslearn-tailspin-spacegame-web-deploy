@@ -127,15 +127,15 @@ stages:
           steps:
           - download: current
             artifact: drop
-          - task: AzureWebApp@1
-            displayName: 'Azure App Service Deploy: website'
-            inputs:
-              azureSubscription: 'private-space-game-con'
-              #deployToSlotOrASE: 'true'
-              #resourceGroupName: 'tailspin-space-game-rg'
-              #slotName: 'swap'
-              appName: '$(WebAppNameStaging)-blue'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+          # - task: AzureWebApp@1
+          #   displayName: 'Azure App Service Deploy: website'
+          #   inputs:
+          #     azureSubscription: 'private-space-game-con'
+          #     #deployToSlotOrASE: 'true'
+          #     #resourceGroupName: 'tailspin-space-game-rg'
+          #     #slotName: 'swap'
+          #     appName: '$(WebAppNameStaging)-blue'
+          #     package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
           #- task: AzureAppServiceManage@0
           - task: AzureWebApp@1
             #displayName: 'Swap deployment slots'
