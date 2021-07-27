@@ -143,7 +143,7 @@ stages:
             inputs:
               azureSubscription: 'private-space-game-con'
               resourceGroupName: 'tailspin-space-game-rg'
-              AppName: '$(WebAppNameStaging)-green'
+              appName: '$(WebAppNameStaging)-green'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
               #sourceSlot: 'swap'
               #targetSlot: 'production'
